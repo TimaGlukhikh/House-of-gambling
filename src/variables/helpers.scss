@@ -1,0 +1,12 @@
+@import './breakpoints.module.scss';
+@import './media.scss';
+@font-face {
+  font-family: 'Lexend';
+  src: url('../assets/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+}

@@ -1,0 +1,17 @@
+@mixin media-max($name) {
+  $width: map-get($breakpoints, $name);
+
+  @if $width {
+    @media screen and (max-width: #{$width - 1}px) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}

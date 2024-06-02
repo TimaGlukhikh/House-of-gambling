@@ -1,0 +1,129 @@
+@import '../../variables/helpers.scss';
+
+.footer {
+  text-align: center;
+  border: 4px solid rgba(71, 139, 249, 1);
+  height: 90px;
+  padding-left: 140px;
+  padding-right: 140px;
+  padding-top: 40px;
+  gap: 32px;
+  border-radius: 64px 64px 0px 0px;
+  border-bottom: none;
+  opacity: 0px;
+  @include media-max('xl') {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include media-max('lg') {
+    height: auto;
+    border: 2px solid rgba(71, 139, 249, 1);
+    border-bottom: none;
+  }
+  @include media-max('md') {
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    max-width: 100%;
+    margin: 0 auto;
+    @include media-max('lg') {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include media-max('md') {
+      justify-content: start;
+      flex-direction: column;
+      align-items: start;
+    }
+    .footerLinks {
+      display: flex;
+      align-items: flex-start;
+      @include media-max('md') {
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      a {
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+        margin-right: 25px;
+        font-size: 16px;
+        @include media-max('xxl') {
+          margin-right: 15px;
+        }
+        @include media-max('xl') {
+          margin-right: 10px;
+          font-size: 12px;
+        }
+        @include media-max('lg') {
+          margin-right: 15px;
+          font-size: 16px;
+        }
+        @include media-max('md') {
+          margin-bottom: 5px;
+        }
+        @include media-max('sm') {
+          font-size: 14px;
+        }
+
+        &:hover {
+          color: rgba(71, 139, 249, 1);
+        }
+      }
+    }
+
+    .socialContent {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      @include media-max('lg') {
+        text-align: center;
+      }
+      @include media-max('md') {
+        text-align: left;
+      }
+      .socialHeader {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 1);
+        padding-right: 10px;
+        margin: 0;
+        margin-bottom: 10px;
+        @include media-max('md') {
+          font-size: 16px;
+          margin-top: 15px;
+        }
+        @include media-max('sm') {
+          font-size: 14px;
+        }
+      }
+      .socialIcons {
+        display: flex;
+        justify-content: center;
+
+        a {
+          &:not(:last-child) {
+            margin-right: 15px;
+            @include media-max('md') {
+              margin-right: 10px;
+            }
+          }
+
+          img {
+            width: 30px;
+            height: 30px;
+            transition: filter 0.3s;
+            &:hover {
+              filter: brightness(1.9);
+            }
+          }
+        }
+      }
+    }
+  }
+}
